@@ -5,13 +5,11 @@ import Shelf from './Shelf';
 export default class Home extends Component {
 
   render() {
-    console.log('content', this.props);
+    console.log('Home', this.props);
     return (
       <div className='container'>
-        <div className='starter-template'>
-          <Shelf />
-          <Cart />
-        </div>
+        <Shelf />
+        <Cart />
       </div>
     );
   }
