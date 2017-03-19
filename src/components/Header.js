@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { NavLink } from 'react-router-dom'
 import routePaths from 'constans/routePaths';
+import './Header.css';
 
 export default class Header extends Component {
   isActive(clicked, current) {
@@ -19,7 +20,7 @@ export default class Header extends Component {
           <div className="navbar-header">
             <a className="navbar-brand" href="#">Project name</a>
           </div>
-          <div id="navbar" className="collapse navbar-collapse">
+          <div id="navbar">
             <ul className="nav navbar-nav">
               <li>
                 <NavLink to={HOME} isActive={this.isActive}>Home</NavLink>
