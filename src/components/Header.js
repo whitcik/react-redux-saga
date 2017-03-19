@@ -18,7 +18,9 @@ export default class Header extends Component {
       <nav className="navbar navbar-inverse">
         <div className="container">
           <div className="navbar-header">
-            <a className="navbar-brand" href="#">Project name</a>
+            <NavLink className="navbar-brand" to={HOME} isActive={this.isActive}>
+              Project name
+            </NavLink>
           </div>
           <div id="navbar">
             <ul className="nav navbar-nav">
