@@ -5,6 +5,7 @@ import Shelf from './Shelf';
 export default class Content extends Component {
 
   render() {
+    console.log('content', this.props);
     return (
       <div className='container'>
         <div className='starter-template'>

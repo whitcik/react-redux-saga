@@ -1,16 +1,19 @@
 import React, { Component } from 'react';
 import Header from './components/Header';
-import Content from './components/Content';
+import Home from './components/Home';
 import Footer from './components/Footer';
+import { Route } from 'react-router-dom';
 import './App.css';
 
 class App extends Component {
 
   render() {
+    console.log('App', this.props);
     return (
       <div className='wrapper-app'>
         <Header />
-        <Content />
+        <Route exact path="/" component={Home}/>
+        <Route path="/about" component={Footer}/>
         <Footer />
       </div>
     );

@@ -1,25 +1,34 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import App from './App';
-import './index.css';
 import { Provider } from 'react-redux';
-import { createStore, applyMiddleware } from 'redux'
-import createSagaMiddleware from 'redux-saga'
+import { createStore, applyMiddleware } from 'redux';
+import createSagaMiddleware from 'redux-saga';
 import rootReducer from  './reducers';
 import rootSaga from './sagas/rootSaga';
+import createHistory from 'history/createBrowserHistory'
+import { ConnectedRouter, routerMiddleware } from 'react-router-redux'
 
-const sagaMiddleware = createSagaMiddleware()
+const sagaMiddleware = createSagaMiddleware();
 
-const StoreInstance = createStore(
+const history = createHistory();
+const historyMiddleware = routerMiddleware(history)
+
+const store = createStore(
     rootReducer,
-    applyMiddleware(sagaMiddleware)
+    applyMiddleware(
+      sagaMiddleware,
+      historyMiddleware
+    )
 );
-
-StoreInstance.runSaga = sagaMiddleware.run(rootSaga);
+window.store = store; //for testing
+store.runSaga = sagaMiddleware.run(rootSaga);
 
 ReactDOM.render(
- <Provider store={StoreInstance}>
-   <App />
- </Provider>,
- document.getElementById('root')
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <App/>
+    </ConnectedRouter>
+  </Provider>,
+  document.getElementById('root')
 );
