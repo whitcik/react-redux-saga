@@ -1,5 +1,5 @@
-import cartReducer from './cartReducer';
-import shelfReducer from './shelfReducer';
+import cartReducer from './home/cartReducer';
+import shelfReducer from './home/shelfReducer';
 import { combineReducers } from 'redux';
 import { routerReducer } from 'react-router-redux'
 

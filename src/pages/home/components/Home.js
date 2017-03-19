@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import Cart from './Cart';
 import Shelf from './Shelf';
 
-export default class Content extends Component {
+export default class Home extends Component {
 
   render() {
     console.log('content', this.props);

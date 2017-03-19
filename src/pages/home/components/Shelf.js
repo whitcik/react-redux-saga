@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-import * as cartActions from '../actions/cartActions';
+import * as cartActions from '../../../actions/home/cartActions';
 
 class Shelf extends Component {
 
