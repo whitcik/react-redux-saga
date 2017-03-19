@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom'
+import routePaths from 'constans/routePaths';
 
 export default class Header extends Component {
 
@@ -13,8 +14,8 @@ export default class Header extends Component {
           </div>
           <div id="navbar" className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
-              <li className="active"><Link to="/">Home</Link></li>
-              <li><Link to="/about">About</Link></li>
+              <li className="active"><Link to={routePaths.HOME}>Home</Link></li>
+              <li><Link to={routePaths.ABOUT}>About</Link></li>
             </ul>
           </div>
         </div>
