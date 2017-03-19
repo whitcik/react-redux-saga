@@ -1,22 +1,21 @@
 import React, { Component } from 'react';
-import Cart from './components/Cart';
-import Shelf from './components/Shelf';
+import Header from './components/Header';
+import Content from './components/Content';
+import Footer from './components/Footer';
 import './App.css';
 
 class App extends Component {
 
   render() {
     return (
-      <div className="container">
-				<div className="row">
-					<div className="col-xs-12">
-              <Shelf />
-              <Cart />
-					</div>
-				</div>
+      <div className='wrapper-app'>
+        <Header />
+        <Content />
+        <Footer />
       </div>
     );
   }
 }
 
 export default App;
+
