@@ -12,7 +12,7 @@ class App extends Component {
   render() {
     console.log('App', this.props);
     return (
-      <div className='wrapper-app'>
+      <div className='height-100p'>
         <Header />
         <Route exact path={routePaths.HOME} component={Home}/>
         <Route path={routePaths.ABOUT} component={About}/>

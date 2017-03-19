@@ -5,9 +5,13 @@ export default class About extends PureComponent {
   render() {
     console.log('About', this.props);
     return (
-      <div className='container'>
-        <h2>About</h2>
-      </div>
+      <section className=' container page-content-wrapper'>
+        <div className="row">
+          <div className="col-xs-12">
+            <h2>About</h2>
+          </div>
+        </div>
+      </section>
     );
   }
 }

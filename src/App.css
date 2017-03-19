@@ -1,5 +1,15 @@
+html{
+  height: 100%;
+}
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
   font-family: sans-serif;
+}
+.height-100p{
+  height: 100%;
+}
+.page-content-wrapper{
+  height: calc(100% - 52px - 30px); /* 52px - header, 30px - footer */
 }

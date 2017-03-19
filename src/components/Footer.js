@@ -1,4 +1,5 @@
 import React, { PureComponent } from 'react';
+import './Footer.css';
 
 export default class Footer extends PureComponent {
 
@@ -6,7 +7,7 @@ export default class Footer extends PureComponent {
     return (
       <footer className="footer">
         <div className='container'>
-          <p>&copy; 2016 Company, Inc.</p>
+          &copy; 2016 Company, Inc.
         </div>
       </footer>
     );

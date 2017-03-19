@@ -7,10 +7,10 @@ export default class Home extends PureComponent {
   render() {
     console.log('Home', this.props);
     return (
-      <div className='container'>
+      <section className='container page-content-wrapper'>
         <Shelf />
         <Cart />
-      </div>
+      </section>
     );
   }
 }

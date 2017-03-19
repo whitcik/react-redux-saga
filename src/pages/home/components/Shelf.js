@@ -26,11 +26,13 @@ class Shelf extends Component {
     });
     
     return (
-      <div>
+      <div className='row'>
+        <div className='col-xs-12'>
           <h2>Store Shelf:</h2>
           <ul>
             {shelfItems}
           </ul>
+          </div>
       </div>
     );
   }

@@ -15,25 +15,25 @@ export default class Header extends Component {
     console.log('Headerss', this.props, routePaths);
     const { HOME, ABOUT } = routePaths;
     return (
-      <nav className="navbar navbar-inverse">
-        <div className="container">
-          <div className="navbar-header">
-            <NavLink className="navbar-brand" to={HOME} isActive={this.isActive}>
-              Project name
-            </NavLink>
-          </div>
-          <div id="navbar">
-            <ul className="nav navbar-nav">
-              <li>
-                <NavLink to={HOME} isActive={this.isActive}>Home</NavLink>
-              </li>
-              <li>
-                <NavLink to={ABOUT} isActive={this.isActive}>About</NavLink>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </nav>
+      <header className="container">
+        <nav className="navbar navbar-inverse">
+            <div className="navbar-header">
+              <NavLink className="navbar-brand" to={HOME} isActive={this.isActive}>
+                Project name
+              </NavLink>
+            </div>
+            <div id="navbar">
+              <ul className="nav navbar-nav">
+                <li>
+                  <NavLink to={HOME} isActive={this.isActive}>Home</NavLink>
+                </li>
+                <li>
+                  <NavLink to={ABOUT} isActive={this.isActive}>About</NavLink>
+                </li>
+              </ul>
+            </div>
+        </nav>
+      </header>
     );
   }
 }
