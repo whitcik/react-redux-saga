@@ -1,12 +1,13 @@
-import React from 'react';
+import React, { PureComponent } from 'react';
 
-const About = (props) => {
-  console.log('About', props);
-  return (
-    <div className='container'>
-      <h2>About</h2>
-    </div>
-  );
+export default class About extends PureComponent {
+
+  render() {
+    console.log('About', this.props);
+    return (
+      <div className='container'>
+        <h2>About</h2>
+      </div>
+    );
+  }
 }
-
-export default About;

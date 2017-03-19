@@ -1,11 +1,18 @@
 import React, { Component } from 'react';
-import { Link } from 'react-router-dom'
+import { NavLink } from 'react-router-dom'
 import routePaths from 'constans/routePaths';
 
 export default class Header extends Component {
+  isActive(clicked, current) {
+    if(!clicked) {
+      return false;
+    }
+    return clicked.path === current.pathname;
+  }
 
   render() {
-    console.log('Header', this.props);
+    console.log('Headerss', this.props, routePaths);
+    const { HOME, ABOUT } = routePaths;
     return (
       <nav className="navbar navbar-inverse">
         <div className="container">
@@ -14,8 +21,12 @@ export default class Header extends Component {
           </div>
           <div id="navbar" className="collapse navbar-collapse">
             <ul className="nav navbar-nav">
-              <li className="active"><Link to={routePaths.HOME}>Home</Link></li>
-              <li><Link to={routePaths.ABOUT}>About</Link></li>
+              <li>
+                <NavLink to={HOME} isActive={this.isActive}>Home</NavLink>
+              </li>
+              <li>
+                <NavLink to={ABOUT} isActive={this.isActive}>About</NavLink>
+              </li>
             </ul>
           </div>
         </div>
